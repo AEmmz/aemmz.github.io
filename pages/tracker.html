@@ -31,7 +31,7 @@
 </header>
 
 <body>
-    <div class="page-color"></div>
+    <div class="page-color" id="page-color"></div>
     <main>
         <div class="mon-container">
             <div class="pic-container">
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="type-container">
-                <div class="type-1"></div>
+                <div class="type-1" id="type-1" value="water"></div>
                 <div class="type-2"></div>
             </div>
             <div class="desc-container">
@@ -126,8 +126,16 @@
                 </div>
             </div>
         </div>
+        <div class="reset-confirmation" id="reset-confirmation">
+            <h3 class="reset-header">Are You Sure?</h3>
+            <div class="confirmation" id="confirmation">
+                <button class="reset-confirm" id="reset-confirm">Confirm</button>
+                <button class="reset-cancel" id="reset-cancel">Cancel</button>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
     </main>
 
-
+    <script src="../scripts/color-codes.js"></script>
     <script src="../scripts/tracker-counter.js"></script>
 </body>

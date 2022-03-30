@@ -8,6 +8,12 @@ const resButton = document.getElementById('reset-button')
 const increment = document.getElementById('inc-num-digit')
 const incUp = document.getElementById('inc-up')
 const incDown = document.getElementById('inc-down')
+
+const confirm = document.getElementById('reset-confirm');
+const cancel = document.getElementById('reset-cancel');
+const confirmationPopup = document.getElementById('reset-confirmation');
+const overlay = document.getElementById('overlay');
+
 let count = 0;
 let incCount = 1;
 
@@ -38,13 +44,6 @@ decButton.addEventListener('click', () => {
     }
 })
 
-resButton.addEventListener('click', () => {
-    count = 0;
-    trackerCount.innerHTML = count;
-})
-
-
-
 // INCREMENT COUNTER
 incUp.addEventListener('click', () => {
     if (incCount < 100) {
@@ -58,4 +57,29 @@ incDown.addEventListener('click', () => {
         incCount--
         increment.innerHTML = incCount
     }
+})
+
+
+resButton.addEventListener('click', () => {
+    if (count > 0) {
+        confirmationPopup.style.display = 'grid';
+        overlay.style.display = 'block';
+    }
+})
+
+confirm.addEventListener('click', () => {
+    confirmationPopup.style.display = 'none';
+    overlay.style.display = 'none';
+    count = 0;
+    trackerCount.innerHTML = count;
+})
+
+cancel.addEventListener('click', () => {
+    confirmationPopup.style.display = 'none';
+    overlay.style.display = 'none';
+})
+
+overlay.addEventListener('click', () => {
+    confirmationPopup.style.display = 'none';
+    overlay.style.display = 'none';
 })

@@ -24,10 +24,9 @@
 
 * {
     margin: 0;
-    background-color: #F5F3F5;
+    background-color: #d1dede;
     font-family: NeueMedium;
 }
-
 
 header {
     display: grid;
@@ -36,12 +35,11 @@ header {
     position: fixed;
     width: 100%;
     z-index: 50;
-    box-shadow: 0px 3px 10px -5px #BFBFBF;
     justify-items: center;
     align-items: center;
     background-color: #343434;
     color: #F5F3F5;
-    /*background-image: linear-gradient(#ffffff, #0000001A);*/
+    border-bottom: 1.5px solid #d1dede;
 }
 header a {
     background-color: transparent;
@@ -62,22 +60,18 @@ header img {
     grid-template-columns: repeat(4, 1fr);
     flex-direction: row;
     list-style: none;
-    justify-self: center;
+    justify-self: right;
+    margin-right: -100px;
     padding-inline-start: 0;
     background-color: transparent;
 }
 
 .nav-menu li{
-    padding: 0 70px;
-    border-right: 1px solid #F5F3F5;
+    padding: 0 50px;
     height: 65px;
     line-height: 65px;
     background-color: transparent;
     text-align: center;
-}
-
-.nav-menu .nav-item-1 {
-    border-left: 1px solid #F5F3F5;
 }
 
 .nav-menu a {
@@ -86,30 +80,251 @@ header img {
     color: #F5F3F5;
 }
 
+.nav-menu a:hover {
+    background-color: #C33C54;
+}
+
+.nav-menu .nav-item-2 {
+    background-color: #C33C54;
+}
+
+.page-color {
+    position:fixed;
+    background-color:#1E91D6 ;
+    height: 100%;
+    width:30%;
+    outline: 20px #ffffff solid;
+    offset: 4px;
+    z-index: -10;
+}
+
 main {
+    display: grid;
+    grid-template-columns: 1fr;
     position: relative;
     top: 50px;
     color: #343434;  
+    justify-content: center;
+    margin: 0 70px;
 }
 
-.intro {
+/* POKEMON CONTAINER */
+.mon-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns:2fr 3fr;
+    grid-template-rows: repeat(12, 1fr);
+    top: 50px;
+    gap: 30px;
+    height: 800px;
+    width:100%;
+    background-color: transparent;
+}
+
+/* PICTURE CONTAINER */
+.pic-container{
+    display: grid;
+    position: sticky;
+    top: 100px;
+    grid-row: 1 / 8;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7fr 2fr;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px -9px #000000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.normal-form{
+    background-color: #343434;
+    border-radius: 15px;
+}
+
+.shiny-form{
+    background-color: #343434;
+    border-radius: 15px;
+}
+
+.button-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #343434;
+    padding: 20px 20px 20px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.favorite-button, .shiny-button, .alpha-button, .alpha-shiny-button, .normal-button, .pkrus-button {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    text-align: center;
-    padding: 50px;
-    height: 70px;
-    background-image: url('../image-assets/page-assets/small-grey-banner-250.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: #F5F3F5;
-    outline-offset: -8px;
-    outline: 4px solid #ffffff;
+    border-left: 0.5px solid #000000;
+    border-right: 0.5px solid #000000;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #C33C54;
+    border-radius: 25px;
 }
 
-.intro h1{
-    font-size: 4rem;
+.button-container i {
     background-color: transparent;
-    position: relative;
+    color: #d1dede;
+}
+
+/* TYPE CONTAINER */
+.type-container {
+    display: grid;
+    position: sticky;
+    top: 575px;
+    grid-row: 8 / 10;
+    height: 80px;
+    margin-top: -10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px -9px #000000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* DESCRIPTION CONTAINER */
+.desc-container{
+    display: grid;
+    grid-row: span 12;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 2fr;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px -9px #000000;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+    gap: 20px;;
+}
+
+.selecter-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #C33C54;
+    height: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecter-container label{
+    background-color: transparent;
+    color: #d1dede;
+    font-size: 20px;
+}
+
+.pokemon-selector, .game-selector {
+    background-color: transparent;
+}
+
+/* TRACKER COUNTER */
+.name-desc-container{
+    background-color: #343434;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    color: #d1dede;
+    gap: 20px;
+}
+
+.name-desc-container h1 {
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.tracker-ui {
+    display: grid;
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    width:100%;
+    height: 350px;
+    background-color: transparent;
+    border-radius: 20px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.counter-num {
+    display: grid;
+    background-color: #1E91D6;
+    font-size: 125px;
+    align-items: center;
+}
+
+.counter-digit {
+    color: #F5F3F5;
+    background-color: transparent;
+}
+
+.counter-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: transparent;
+}
+
+.blank-container{
+    background-color: transparent;
+}
+
+.locations-container{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
+    background-color: #C33C54;
+    border-radius: 20px;
+    height: 130px;
+    text-align: center;
+    padding: 20px;
+    color: #d1dede;
+}
+
+.route-location-title, .game-location-title{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.game-location-title{
+    margin-top: 10px;
+}
+
+.route-location {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: transparent;
+    justify-items: center;
+    align-items: center;
+}
+
+.game-location {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: transparent;
+    justify-items: center;
+    align-items: center;
+}
+
+.locations-container p {
+    background-color: transparent;
 }

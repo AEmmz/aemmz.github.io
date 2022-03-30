@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./image-assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./image-assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./image-assets/favicon/site.webmanifest">
+    <script src="https://kit.fontawesome.com/b83f6923d9.js" crossorigin="anonymous"></script>
 </head>
 
 <!--HEADER-->
@@ -21,7 +22,7 @@
         <a href="../index.html">
             <li class="nav-item-1">Home</li>
         </a>
-        <a href="./pages/tracker.html">
+        <a href="./tracker.html">
             <li class="nav-item-2">Tracker</li>
         </a>
         <li class="nav-item-3">Checklist</li>
@@ -30,9 +31,85 @@
 </header>
 
 <body>
+    <div class="page-color"></div>
     <main>
-        <div class="intro">
-            <h1 class="intro-header">The Tracker</h1>
+        <div class="mon-container">
+            <div class="pic-container">
+                <div class="image-container">
+                    <div class="normal-form"></div>
+                    <div class="shiny-form"></div>
+                </div>
+                <div class="button-container">
+                    <div class="normal-button">
+                        <i class="fa-solid fa-circle-minus fa-2xl"></i>
+                    </div>
+                    <div class="shiny-button">
+                        <i class="fa-solid fa-star fa-2xl"></i>
+                    </div>
+                    <div class=" alpha-button">
+                        <i class="fa-solid fa-face-angry fa-2xl"></i>
+                    </div>
+                    <div class="favorite-button">
+                        <i class="fa-solid fa-heart fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="type-container">
+                <div class="type-1"></div>
+                <div class="type-2"></div>
+            </div>
+            <div class="desc-container">
+                <div class="selecter-container">
+                    <div class="pokemon-selector">
+                        <label for="pkmn-name">Pokemon:</label>
+                        <br>
+                        <input type="text" id="pkmn-name" name="pkmn-name"></input>
+                    </div>
+                    <div class="game-selector">
+                        <label for="pkmn-name">Game:</label>
+                        <br>
+                        <input type="text" id="game-name" name="game-name"></input>
+                    </div>
+                </div>
+                <div class="name-desc-container">
+                    <h1 class="poke-name">(Name) Counter</h1>
+                    <div class="tracker-ui" id="tracker">
+                        <div class="counter-num">
+                            <p class="counter-digit">0</p>
+                        </div>
+                        <div class="counter-buttons">
+                            <button class="minus-button">
+                                <i class="fa-solid fa-minus fa-2xl"></i>
+                            </button>
+                            <button class="reset-button">
+                                <i class="fa-solid fa-rotate-right fa-xl"></i>
+                            </button>
+                            <button class="plus-button">
+                                <i class="fa-solid fa-plus fa-2xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="locations-container">
+                    <h2 class="route-location-title">Route Options (current game):</h2>
+                    <div class="route-location">
+                        <p class="route-location-1">Route 001</p>
+                        <p class="route-location-2">Route 002</p>
+                        <p class="route-location-3">Route 003</p>
+                        <p class="route-location-4">Route 004</p>
+                    </div>
+                    <h2 class="game-location-title">Game Options:</h2>
+                    <div class="game-location">
+                        <p class="game-location-1">Red / Blue</p>
+                        <p class="game-location-2">Gold / Silver</p>
+                        <p class="game-location-3">Diamond / Pearl</p>
+                        <p class="game-location-4">Legends / Arceus</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+
+
+
 </body>

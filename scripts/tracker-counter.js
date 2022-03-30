@@ -28,6 +28,21 @@ incButton.addEventListener('click', () => {
     }
 })
 
+incButton.addEventListener('mousedown', () => {
+    intervalID = setInterval(function () {
+        if (count < 1000000) {
+            count = count + incCount;
+            trackerCount.innerHTML = count;
+        } else {
+            trackerCount.innerHTML = "MAX";
+        }
+    }, 300)
+})
+
+incButton.addEventListener('mouseup', () => {
+    clearInterval(intervalID);
+})
+
 numButton.addEventListener('click', () => {
     if (count < 1000000) {
         count = count + incCount;
@@ -37,11 +52,47 @@ numButton.addEventListener('click', () => {
     }
 })
 
+numButton.addEventListener('mousedown', () => {
+    intervalID = setInterval(function () {
+        if (count < 1000000) {
+            count = count + incCount;
+            trackerCount.innerHTML = count;
+        } else {
+            trackerCount.innerHTML = "MAX";
+        }
+    }, 300)
+})
+
+numButton.addEventListener('mouseup', () => {
+    clearInterval(intervalID);
+})
+
+
 decButton.addEventListener('click', () => {
     if (count > 0) {
         count = count - incCount;
-        trackerCount.innerHTML = count;
     }
+    if (count < 0) {
+        count = 0;
+    }
+    trackerCount.innerHTML = count;
+}
+)
+
+decButton.addEventListener('mousedown', () => {
+    intervalID = setInterval(function () {
+        if (count > 0) {
+            count = count - incCount;
+        }
+        if (count < 0) {
+            count = 0;
+        }
+        trackerCount.innerHTML = count;
+    }, 300)
+})
+
+decButton.addEventListener('mouseup', () => {
+    clearInterval(intervalID);
 })
 
 // INCREMENT COUNTER
@@ -52,11 +103,38 @@ incUp.addEventListener('click', () => {
     }
 })
 
+incUp.addEventListener('mousedown', () => {
+    intervalID = setInterval(function () {
+        if (incCount < 100) {
+            incCount++;
+            increment.innerHTML = incCount
+        }
+    }, 300)
+})
+
+incUp.addEventListener('mouseup', () => {
+    clearInterval(intervalID);
+}
+)
+
 incDown.addEventListener('click', () => {
     if (incCount > 1) {
         incCount--
         increment.innerHTML = incCount
     }
+})
+
+incDown.addEventListener('mousedown', () => {
+    intervalID = setInterval(function () {
+        if (incCount > 1) {
+            incCount--;
+            increment.innerHTML = incCount;
+        }
+    }, 300)
+})
+
+incDown.addEventListener('mouseup', () => {
+    clearInterval(intervalID);
 })
 
 

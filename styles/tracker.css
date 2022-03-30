@@ -237,7 +237,7 @@ main {
 .name-desc-container{
     background-color: #343434;
     display: grid;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr;
     text-align: center;
     justify-content: center;
@@ -248,9 +248,57 @@ main {
     gap: 20px;
 }
 
-.name-desc-container h1 {
+.name-inc-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: transparent;
+    align-items: center;
+}
+
+.name-inc-container h1 {
     background-color: transparent;
     font-size: 40px;
+    text-align: left;
+}
+
+.increment-selector {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-color: transparent;
+    justify-self: right;
+}
+
+.increment-label {
+    background-color: transparent;
+}
+
+.increment-label h2{
+    background-color:transparent;
+}
+
+.increment-counter {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: transparent;
+}
+
+.inc-num, .inc-up, .inc-down, .inc-num p, .inc-up i, .inc-down i{
+    background-color: transparent;
+}
+
+.inc-num, .inc-up, .inc-down {
+    margin-top: 10px;
+    border: none;
+    color:#d1dede;
+}
+
+.inc-num {
+    display: grid;
+    grid-row: span 2;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
 }
 
 .tracker-ui {
@@ -271,6 +319,7 @@ main {
     background-color: #1E91D6;
     font-size: 125px;
     align-items: center;
+    border: none;
 }
 
 .counter-digit {

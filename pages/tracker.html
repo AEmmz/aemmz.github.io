@@ -72,19 +72,37 @@
                     </div>
                 </div>
                 <div class="name-desc-container">
-                    <h1 class="poke-name">(Name) Counter</h1>
-                    <div class="tracker-ui" id="tracker">
-                        <div class="counter-num">
-                            <p class="counter-digit">0</p>
+                    <div class="name-inc-container">
+                        <h1 class="poke-name">(Name) Counter</h1>
+                        <div class="increment-selector">
+                            <div class="increment-label">
+                                <h2>Increment:</h2>
+                            </div>
+                            <div class="increment-counter">
+                                <div class="inc-num">
+                                    <p class="inc-num-digit" id="inc-num-digit">1</p>
+                                </div>
+                                <button class="inc-up" id="inc-up">
+                                    <i class="fa-solid fa-angle-up fa fa-2xl"></i>
+                                </button>
+                                <button class="inc-down" id="inc-down">
+                                    <i class="fa-solid fa-angle-down fa-2xl"></i>
+                                </button>
+                            </div>
                         </div>
+                    </div>
+                    <div class="tracker-ui" id="tracker">
+                        <button class="counter-num" id="counter-num">
+                            <p class="counter-digit" id="counter-digit">0</p>
+                        </button>
                         <div class="counter-buttons">
-                            <button class="minus-button">
+                            <button class="minus-button" id="minus-button">
                                 <i class="fa-solid fa-minus fa-2xl"></i>
                             </button>
-                            <button class="reset-button">
+                            <button class="reset-button" id="reset-button">
                                 <i class="fa-solid fa-rotate-right fa-xl"></i>
                             </button>
-                            <button class="plus-button">
+                            <button class="plus-button" id="plus-button">
                                 <i class="fa-solid fa-plus fa-2xl"></i>
                             </button>
                         </div>
@@ -111,5 +129,5 @@
     </main>
 
 
-
+    <script src="../scripts/tracker-counter.js"></script>
 </body>
